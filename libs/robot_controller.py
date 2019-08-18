@@ -19,7 +19,7 @@ import time
 class Snatch3r(object):
     """Commands for the Snatch3r robot that might be useful in many different programs."""
     
-    # TODO: Implement the Snatch3r class as needed when working the sandox exercises
+    # Done: Implement the Snatch3r class as needed when working the sandox exercises
     # (and delete these comments)
 
     def drive_inches(self, inches, speed):
@@ -49,15 +49,15 @@ class Snatch3r(object):
         assert right_motor.connected
 
         if degrees_to_turn > 0:
-            left_motor.run_to_rel_pos(speed_sp=turn_speed_sp, position_sp=-degrees_to_turn * 4)
-            right_motor.run_to_rel_pos(speed_sp=turn_speed_sp, position_sp=degrees_to_turn * 4)
+            left_motor.run_to_rel_pos(speed_sp=turn_speed_sp, position_sp=-degrees_to_turn * 4.9)
+            right_motor.run_to_rel_pos(speed_sp=turn_speed_sp, position_sp=degrees_to_turn * 4.9)
             left_motor.wait_while(ev3.Motor.STATE_RUNNING)
             right_motor.wait_while(ev3.Motor.STATE_RUNNING)
             ev3.Sound.beep().wait()
 
         if degrees_to_turn < 0:
-            right_motor.run_to_rel_pos(speed_sp=turn_speed_sp, position_sp=degrees_to_turn * 4)
-            left_motor.run_to_rel_pos(speed_sp=turn_speed_sp, position_sp=-degrees_to_turn * 4)
+            right_motor.run_to_rel_pos(speed_sp=turn_speed_sp, position_sp=degrees_to_turn * 4.9)
+            left_motor.run_to_rel_pos(speed_sp=turn_speed_sp, position_sp=-degrees_to_turn * 4.9)
             left_motor.wait_while(ev3.Motor.STATE_RUNNING)
             right_motor.wait_while(ev3.Motor.STATE_RUNNING)
             ev3.Sound.beep().wait()

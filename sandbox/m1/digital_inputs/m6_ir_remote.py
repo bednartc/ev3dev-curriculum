@@ -99,7 +99,7 @@ def main():
 # Some event handlers have been written for you (ones for the arm).
 # Movement event handlers have not been provided.
 # ----------------------------------------------------------------------
-# TODO: 6. Implement the IR handler callbacks handlers.
+# Done: 6. Implement the IR handler callbacks handlers.
 
 def handle_red_up_1(button_state):
     left_motor = ev3.LargeMotor(ev3.OUTPUT_B)
